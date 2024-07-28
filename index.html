@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Happy Birthday ShenShine</title>
+</head>
+<body onload="fadeIn()">
+
+    <div class="main-container">
+
+        <div class="title"><p class="greet-text"></p></div>
+        <div class="few text"><p class="second-greet"></p></div>
+        <div class="btn-container">
+            <button class='glowing-btn'>
+                <a href="#" id="gift-link" target="_self">
+                <span class='glowing-txt'>C<span class='faulty-letter'>L</span>ICK</span>
+            </a>
+            </button>
+            <!-- <a href="content.html" target="_self">Click here for the gift</a> -->
+        </div>
+    </div>
+
+    <script>
+        const div = document.querySelector(".greet-text");
+        const text = "Hello ShenShine, Happy Birthday!";
+        const div2 = document.querySelector(".second-greet");
+        const text2 = "I made a small gift for you, hope you'll like it";
+        const btnContainer = document.querySelector(".btn-container");
+        const giftLink = document.getElementById("gift-link");
+
+        function typeText(element, text, i = 0, callback) {
+            if (i === 0) {
+                element.textContent = "";
+            }
+            element.textContent += text[i];
+
+            if (i === text.length - 1) {
+                if (callback) {
+                    callback();
+                }
+                return;
+            }
+
+            setTimeout(() => typeText(element, text, i + 1, callback), 100);
+        }
+
+
+        setTimeout(() => {
+            typeText(div, text, 0, () => {
+                setTimeout(() => {
+                    typeText(div2, text2, 0, () => {
+                        btnContainer.style.display = 'block'; // Ensure it is displayed
+                        setTimeout(() => {
+                            btnContainer.classList.add('show'); // Add the 'show' class to trigger transition
+                        }, 500); // Delay to allow display change to take effect
+                    });
+                }, 500);
+            });
+        }, 800); // 2 seconds delay before starting the first text typing
+
+
+                // Handle button click to add transition and delay
+                giftLink.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            document.body.classList.add("transition-out"); // Add transition-out class to body
+            setTimeout(() => {
+                window.location.href = "content.html"; // Redirect to the next page
+            }, 2000); // Delay for the transition duration
+        });
+
+        function fadeIn() {
+            document.body.style.opacity = 1;
+        }
+    </script>
+
+</body>
+
+</html>
