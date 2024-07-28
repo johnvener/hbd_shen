@@ -604,8 +604,8 @@ body {
     background-repeat: no-repeat;
     background-blend-mode: luminosity;
     z-index: 1;
-    opacity: .5;
-    filter: blur(1px);
+    opacity: .6;
+    /* filter: blur(1px); */
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;

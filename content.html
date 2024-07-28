@@ -120,7 +120,7 @@
                 return;
             }
 
-            setTimeout(() => typeText(element, text, i + 1, callback), 100);
+            setTimeout(() => typeText(element, text, i + 1, callback), 90);
         }
 
         function typeAllTexts() {
@@ -142,13 +142,13 @@
         }
 
         function startTypingAfterDelay() {
-            setTimeout(typeAllTexts, 10500); // Start typing after 5 seconds
+            setTimeout(typeAllTexts, 11500); // Start typing after 5 seconds
         }
     
         function hideTextContainer() {
                         setTimeout(() => {
                             textContainer.classList.add('visible'); // Add the 'show' class to trigger transition
-                        }, 10000); // Delay to allow display change to take effect
+                        }, 11000); // Delay to allow display change to take effect
                     }
      // 2 seconds delay before starting the first text typing
 
