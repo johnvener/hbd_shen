@@ -344,6 +344,9 @@
   .glowing-btn{
     font-size: 1em;
   }
+  .glowing-btn::before {
+    bottom: 5px;
+  }
 }
 
 /* END OF CUSTOM BUTTON */
