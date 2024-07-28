@@ -110,7 +110,7 @@
             typed.textContent += text[i];
 
               // Scroll the element into view
-              element.scrollIntoView({ behavior: 'smooth', block: 'end' });
+              window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 
             if (i === text.length - 1) {
                 cursor.remove();

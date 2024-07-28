@@ -709,3 +709,12 @@ p.txt-content.opc span {
 .text-container.visible {
   opacity: 1;
 }
+
+@media screen and (max-width:450px) {
+  p.txt-content {
+    font-size: 10px !important;
+  }
+  strong.txt-content span {
+    font-size: 10px !important;
+}
+}
