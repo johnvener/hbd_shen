@@ -626,10 +626,10 @@ body {
     margin: 0 auto;
     margin-top: 1em;
     max-width: 600px;
-    border: 1px solid;
+    /* border: 1px solid; */
     border-radius: 10px;
     margin-bottom: 1.5em;
-    box-shadow: inset 0px 0px 0.4em 0px var(--glow-color), 0px 0px 0.4em 0px var(--glow-color);
+    /* box-shadow: inset 0px 0px 0.4em 0px var(--glow-color), 0px 0px 0.4em 0px var(--glow-color); */
 }
 
 :root {

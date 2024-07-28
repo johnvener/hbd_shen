@@ -16,7 +16,7 @@
  
 
  .main-container {
-    text-align: center;
+    text-align: left;
     margin-top: 4em;
     padding: 0 10px;
  }
@@ -44,7 +44,7 @@
 .few {
     display: block;
     width: fit-content;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .few p {
@@ -109,6 +109,16 @@
     }
 }
 
+@keyframes transitionOut {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+}
+
 
 .btn-container {
     display: none; /* Hide the button initially */
@@ -120,6 +130,7 @@
     display: block; /* Ensure it is displayed */
     opacity: 1; /* Fade it in */
     transform: translateY(0); /* Slide it up */
+    text-align: center;
 }
 
 /* BUTTON CUSTOM */
@@ -338,18 +349,18 @@
 
 body {
     opacity: 0;
-    transition: opacity 10s ease;
+    transition: opacity 5s ease;
 }
-/* body.transition-out {
-    opacity: 0;
-} */
+body.transition-out {
+    animation: transitionOut 2s ease-out;
+}
 
 button.glowing-btn a {
     text-decoration: none;
     color: #fa98bc;
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:450px) {
     .few p {
         font-size: 16px;
         text-align: left;
