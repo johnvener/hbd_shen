@@ -40,6 +40,7 @@
 
 .btn-container {
     margin-top: 5em;
+    overflow: visible;
 }
 
 .few {
@@ -132,6 +133,7 @@
     opacity: 1; /* Fade it in */
     transform: translateY(0); /* Slide it up */
     text-align: center;
+    height: 150px;
 }
 
 /* BUTTON CUSTOM */
@@ -163,6 +165,7 @@
   font-size: 2em;
   font-weight: 900;
   letter-spacing: 1em;
+  overflow: visible;
 
   -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
     0px 0px 0.5em 0px var(--glow-color);
