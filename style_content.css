@@ -713,9 +713,31 @@ p.txt-content.opc span {
 
 @media screen and (max-width:450px) {
   p.txt-content {
+    font-size: 12px !important;
+  }
+  strong.txt-content span {
+    font-size: 12px !important;
+}
+p.txt-content.hbd-text {
+  font-size: 20px !important;
+  text-transform: uppercase;
+}
+}
+
+@media screen and (max-width:420px) {
+  p.txt-content {
     font-size: 10px !important;
   }
   strong.txt-content span {
     font-size: 10px !important;
 }
+p.txt-content.hbd-text {
+  font-size: 20px !important;
+  text-transform: uppercase;
+}
+}
+
+p.txt-content.hbd-text {
+  font-size: 20px !important;
+  text-transform: uppercase;
 }
