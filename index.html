@@ -16,7 +16,7 @@
         <div class="btn-container">
             <button class='glowing-btn'>
                 <a href="#" id="gift-link" target="_self">
-                <span class='glowing-txt'>C<span class='faulty-letter'>L</span>ICK</span>
+                <span class='glowing-txt'>T<span class='faulty-letter'>A</span>P<span class='faulty-letter'> T</span>O OP<span class='faulty-letter'>E</span>N</span>
             </a>
             </button>
             <!-- <a href="content.html" target="_self">Click here for the gift</a> -->
@@ -44,7 +44,7 @@
                 return;
             }
 
-            setTimeout(() => typeText(element, text, i + 1, callback), 100);
+            setTimeout(() => typeText(element, text, i + 1, callback), 50);
         }
 
 
@@ -68,7 +68,7 @@
             document.body.classList.add("transition-out"); // Add transition-out class to body
             setTimeout(() => {
                 window.location.href = "content.html"; // Redirect to the next page
-            }, 2000); // Delay for the transition duration
+            }, 1000); // Delay for the transition duration
         });
 
         function fadeIn() {

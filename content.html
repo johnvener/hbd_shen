@@ -50,21 +50,23 @@
         <div class="txt-container"><p class="txt-content" data-text="Thank you for taking the time to view what I've made for you."></p></div>
         <br/>
         <div class="txt-container"><p class="txt-content" data-text="'Di man ako naging perfect na boyfriend sa'yo,"></p></div>
-        <div class="txt-container"><p class="txt-content" data-text="Noong mga panahong naging ta'yo"></p></div>
         <div class="txt-container"><p class="txt-content" data-text="Sana sa paraang ito, makabawi ako kahit papano."></p></div>
+        <br/>
         <div class="txt-container"><p class="txt-content" data-text="I made you cry on your last birthday,"></p></div>
         <div class="txt-container"><p class="txt-content" data-text="and that was the cue that triggers, and worsen"></p></div>
-        <div class="txt-container"><p class="txt-content" data-text="your insecurities, traumas &amp; trust issues."></p></div>
-        <div class="txt-container"><p class="txt-content" data-text="Ngayong birthday mo kahit huli na ang lahat,"></p> </div>
+        <div class="txt-container"><p class="txt-content" data-text=" all your insecurities, traumas &amp; trust issues."></p></div>
+        <div class="txt-container"><p class="txt-content" data-text="Ngayong birthday mo, kahit huli na ang lahat,"></p> </div>
         <div class="txt-container"><p class="txt-content" data-text="magawa ko manlang ng tama."></p></div>
         <br/>
-        <div class="txt-container"><strong class="txt-content" data-text="You're Beautiful [even without make up, maniwala ka :) ]"></strong></div>
+        <div class="txt-container"><strong class="txt-content" data-text="You're Beautiful inside-out,"></strong></div>
+        <div class="txt-container"><strong class="txt-content" data-text="even without filters and make up, maniwala ka :)"></strong></div>
         <div class="txt-container"><strong class="txt-content" data-text="I've seen you many times without having any,"></strong></div>
         <div class="txt-container"><strong class="txt-content" data-text="hindi ko man na-express o napakita sa'yo"></strong></div>
         <div class="txt-container"><strong class="txt-content" data-text="but that's when I loved  you most. "></strong></div>
         <br/>
         <div class="txt-container"><strong class="txt-content" data-text="You're Kind [ kahit tampuhin ka ]"></strong></div>
-        <div class="txt-container"><strong class="txt-content" data-text="You're Patient [ kahit minsan mabilis kang mairita, lalo na sa ML :b ]"></strong></div>
+        <div class="txt-container"><strong class="txt-content" data-text="You're Patient [ kahit minsan mabilis kang mairita,"></strong></div>
+        <div class="txt-container"><strong class="txt-content" data-text="lalo na sa ML :b ]"></strong></div>
         <div class="txt-container"><strong class="txt-content" data-text="You're Sweet [ always have been :) ]"></strong></div>
         <div class="txt-container"><strong class="txt-content" data-text="and You're everything a man could ever wish for."></strong></div>
         <br/>
@@ -82,8 +84,10 @@
         <div class="txt-container"><p class="txt-content" data-text="meant for better things."></p></div>
         <div class="txt-container"><p class="txt-content" data-text="Yet, you were the best thing that ever happened to me."></p></div>
         <br/>
-        <div class="txt-container"><p class="txt-content" data-text="I will always love you, hanggang sa susunod na habang buhay."></p></div>
-        <div class="txt-container"><p class="txt-content" data-text="I miss you a lot pero sa buhay na 'to, hanggang dito nalang ako."></p></div>
+        <div class="txt-container"><p class="txt-content" data-text="I will always love you,"></p></div>
+        <div class="txt-container"><p class="txt-content" data-text="hanggang sa susunod na habang buhay."></p></div>
+        <div class="txt-container"><p class="txt-content" data-text="I miss you a lot pero sa buhay na 'to,"></p></div>
+        <div class="txt-container"><p class="txt-content" data-text="hanggang dito nalang ako."></p></div>
         <br/>
         <div class="txt-container"><p class="txt-content" data-text="I wish you all the best in life Shen,"> </p></div>
         <div class="txt-container"><p class="txt-content" data-text="Best of Luck and Hardowrk on the journey ahead!"></p></div>
@@ -120,7 +124,7 @@
                 return;
             }
 
-            setTimeout(() => typeText(element, text, i + 1, callback), 90);
+            setTimeout(() => typeText(element, text, i + 1, callback), 50);
         }
 
         function typeAllTexts() {
@@ -134,7 +138,7 @@
                 const element = textElements[index];
                 const text = element.getAttribute("data-text");
                 typeText(element, text, 0, () => {
-                    setTimeout(() => typeNext(index + 1), 500); // Adjust the delay between lines if needed
+                    setTimeout(() => typeNext(index + 1), 800); // Adjust the delay between lines if needed
                 });
             }
 

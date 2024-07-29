@@ -642,6 +642,7 @@ body {
   position: relative;
   top: -97px;
   left: -77px;
+  border: 1px solid var(--glow-color);
   box-shadow: inset 0px 0px 0.1em 0px var(--glow-color), 0px 0px 0.1em 0px var(--glow-color);
   animation: glowing_frame 2.5s ease-in-out infinite;
   border-radius: 300px 300px 0 0;
