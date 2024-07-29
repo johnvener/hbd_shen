@@ -16,7 +16,7 @@
  
 
  .main-container {
-    text-align: left;
+    text-align: center;
     margin-top: 4em;
     padding: 0 10px;
     height: 100vh;
@@ -46,7 +46,7 @@
 .few {
     display: block;
     width: fit-content;
-    /* margin: auto; */
+    margin: auto;
 }
 
 .few p {
@@ -367,6 +367,19 @@ button.glowing-btn a {
     color: #fa98bc;
 }
 
+@media screen and (max-width:550px) {
+    .few p,  .title {
+ text-align: left;
+    }
+    .few {
+        margin: unset !important;
+    }
+    .main-container {
+        text-align: center !important;
+    }
+
+}
+
 @media screen and (max-width:450px) {
     .few p {
         font-size: 20px;
@@ -376,4 +389,11 @@ button.glowing-btn a {
         font-size: 30px;
         text-align: left;
     }
+    .few {
+        margin: unset !important;
+    }
+    .main-container {
+        text-align: center !important;
+    }
+
 }
