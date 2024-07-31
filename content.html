@@ -93,12 +93,17 @@
         <div class="txt-container"><p class="txt-content" data-text="I wish you all the best in life Shen,"> </p></div>
         <div class="txt-container"><p class="txt-content" data-text="Best of Luck and Hardwork on the journey ahead!"></p></div>
         <br/>
-        <div class="txt-container"><strong><p class="txt-content hbd-text" data-text="Happy 21st Birthday :)"></p></strong></div>
+        
+        <div class="txt-container">
+            <strong>
+                <p class="txt-content hbd-text" data-text="Happy 2<span class='faulty-letter'>1</span><sup>st</sup> Birthday :)"></p>
+            </strong>
+        </div>
         <div class="txt-container"><p class="txt-content opc" data-text="&amp; ex 14th Monthsarry"> </p></div>
         <div class="txt-container"><p class="txt-content" data-text="-V"></p></div>
        
     </div>
-    <script>
+    <!-- <script>
 
         const textContainer = document.querySelector(".text-container");
         // textContainer.classList.add("visible");
@@ -147,13 +152,13 @@
         }
 
         function startTypingAfterDelay() {
-            setTimeout(typeAllTexts, 11500); // Start typing after 5 seconds
+            setTimeout(typeAllTexts, 0); // Start typing after 11.5 seconds
         }
     
         function hideTextContainer() {
                         setTimeout(() => {
                             textContainer.classList.add('visible'); // Add the 'show' class to trigger transition
-                        }, 11000); // Delay to allow display change to take effect
+                        }, 0); // Delay to allow display change to take effect
                     }
      // 2 seconds delay before starting the first text typing
 
@@ -164,6 +169,76 @@
             startTypingAfterDelay();
         }
 
+    </script> -->
+    <script>
+        const textContainer = document.querySelector(".text-container");
+    
+        function fadeIn() {
+            document.body.style.opacity = 1;
+        }
+    
+        function typeText(element, text, i = 0, callback) {
+            // If starting, set up the HTML structure
+            if (i === 0) {
+                element.innerHTML = "<span class='typed'></span><span class='cursor'>|</span>";
+            }
+            const typed = element.querySelector(".typed");
+            const cursor = element.querySelector(".cursor");
+    
+            // Use innerHTML to render HTML content
+            typed.innerHTML = text.substring(0, i + 1);
+    
+            // Scroll the element into view
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    
+            if (i === text.length - 1) {
+                cursor.remove();
+                if (callback) {
+                    callback();
+                }
+                return;
+            }
+    
+            // Continue typing with a delay
+            setTimeout(() => typeText(element, text, i + 1, callback), 50);
+        }
+    
+        function typeAllTexts() {
+            const textElements = document.querySelectorAll(".txt-content");
+    
+            function typeNext(index) {
+                if (index >= textElements.length) {
+                    return;
+                }
+    
+                const element = textElements[index];
+                const text = element.getAttribute("data-text");
+                typeText(element, text, 0, () => {
+                    setTimeout(() => typeNext(index + 1), 800); // Delay between lines if needed
+                });
+            }
+    
+            typeNext(0);
+        }
+    
+        function startTypingAfterDelay() {
+            setTimeout(typeAllTexts, 11500); // Start typing after 11.5 seconds
+        }
+    
+        function hideTextContainer() {
+            setTimeout(() => {
+                textContainer.classList.add('visible'); // Trigger transition
+            }, 11000); // Delay for effect
+        }
+    
+        function initPage() {
+            fadeIn();
+            hideTextContainer();
+            startTypingAfterDelay();
+        }
+    
+        // Initialize on load
+        window.onload = initPage;
     </script>
 </body>
 </html>
