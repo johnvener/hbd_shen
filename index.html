@@ -14,7 +14,7 @@
         <div class="title"><p class="greet-text"></p></div>
         <div class="few text"><p class="second-greet"></p></div>
         <div class="btn-container">
-            <button class='glowing-btn'  onclick="setMusicFlag()">
+            <button class='glowing-btn'  id="gift-button">
                 <a href="#" id="gift-link" target="_self">
                 <span class='glowing-txt'>T<span class='faulty-letter'>A</span>P<span class='faulty-letter'> T</span>O OP<span class='faulty-letter'>E</span>N</span>
             </a>
@@ -78,6 +78,13 @@
         function setMusicFlag() {
             localStorage.setItem('playMusic', 'true');
         }
+
+        // Add event listeners for both click and touchstart
+        document.addEventListener('DOMContentLoaded', () => {
+            const giftButton = document.getElementById('gift-button');
+            giftButton.addEventListener('click', setMusicFlag);
+            giftButton.addEventListener('touchstart', setMusicFlag);
+        });
     </script>
 
 </body>
