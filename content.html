@@ -9,6 +9,8 @@
 </head>
 <body onload="initPage()">
 
+    <audio id="background-music" src="patawad.mp3" autoplay loop></audio>
+
     <div class="container">
         <div class="glow-container"> </div>
         <div class="glass"></div>
@@ -200,7 +202,7 @@
             }
     
             // Continue typing with a delay
-            setTimeout(() => typeText(element, text, i + 1, callback), 50);
+            setTimeout(() => typeText(element, text, i + 1, callback), 100);
         }
     
         function typeAllTexts() {
@@ -230,12 +232,26 @@
                 textContainer.classList.add('visible'); // Trigger transition
             }, 11000); // Delay for effect
         }
-    
+
+   // Check if the music flag is set
+   if (localStorage.getItem('playMusic') === 'true') {
+                playMusic();
+                localStorage.removeItem('playMusic'); // Remove flag after use
+            }
+        
+
+        function playMusic() {
+            const audio = document.getElementById('background-music');
+            audio.volume = 0.3;
+            audio.play();
+        }
         function initPage() {
             fadeIn();
             hideTextContainer();
             startTypingAfterDelay();
         }
+
+
     
         // Initialize on load
         window.onload = initPage;
